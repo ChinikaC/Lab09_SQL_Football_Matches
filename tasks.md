@@ -30,14 +30,14 @@ SELECT name  FROM divisions WHERE country LIKE 'Scotland';
 
 ```sql
 
-
+SELECT count(*) FROM matches WHERE division_code = 'D1' AND (hometeam = 'Freiburg' OR awayteam = 'Freiburg')
 
 ```
 
 5) Find the teams which include the word "City" in their name. 
 
 ```sql
-<!-- Copy solution here -->
+
 
 
 ```
