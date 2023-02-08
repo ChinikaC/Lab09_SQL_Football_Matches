@@ -13,8 +13,7 @@ SELECT * FROM matches WHERE season = 2017;
 2) Find all the matches featuring Barcelona.
 
 ```sql
-SELECT * FROM matches WHERE hometeam = 'Barcelona';
-SELECT * FROM matches WHERE awayteam = 'Barcelona';
+SELECT * FROM matches WHERE 'Barcelona' IN (hometeam , awayteam);
 
 
 ```
@@ -22,7 +21,7 @@ SELECT * FROM matches WHERE awayteam = 'Barcelona';
 3) What are the names of the Scottish divisions included?
 
 ```sql
-<!-- Copy solution here -->
+SELECT name  FROM divisions WHERE country LIKE 'Scotland';
 
 
 ```
@@ -30,7 +29,7 @@ SELECT * FROM matches WHERE awayteam = 'Barcelona';
 4) Find the value of the `code` for the `Bundesliga` division. Use that code to find out how many matches Freiburg have played in that division. HINT: You will need to query both tables
 
 ```sql
-<!-- Copy solution here -->
+
 
 
 ```
