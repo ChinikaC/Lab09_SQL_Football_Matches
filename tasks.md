@@ -29,7 +29,7 @@ SELECT name  FROM divisions WHERE country LIKE 'Scotland';
 4) Find the value of the `code` for the `Bundesliga` division. Use that code to find out how many matches Freiburg have played in that division. HINT: You will need to query both tables
 
 ```sql
-
+SELECT code FROM divisions WHERE name='Bundesliga';
 SELECT count(*) FROM matches WHERE division_code = 'D1' AND (hometeam = 'Freiburg' OR awayteam = 'Freiburg')
 
 ```
@@ -37,7 +37,7 @@ SELECT count(*) FROM matches WHERE division_code = 'D1' AND (hometeam = 'Freibur
 5) Find the teams which include the word "City" in their name. 
 
 ```sql
-
+SELECT DISTINCT hometeam FROM matches WHERE hometeam LIKE '%City%';
 
 
 ```
@@ -45,7 +45,8 @@ SELECT count(*) FROM matches WHERE division_code = 'D1' AND (hometeam = 'Freibur
 6) How many different teams have played in matches recorded in a French division?
 
 ```sql
-<!-- Copy solution here -->
+SELECT code FROM divisions WHERE country='France';
+SELECT COUNT(DISTINCT hometeam) FROM matches WHERE division_code='F1' or division_code='F2';
 
 
 ```
