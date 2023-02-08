@@ -21,7 +21,7 @@ SELECT * FROM matches WHERE 'Barcelona' IN (hometeam , awayteam);
 3) What are the names of the Scottish divisions included?
 
 ```sql
-SELECT name  FROM divisions WHERE country LIKE 'Scotland';
+SELECT name FROM divisions WHERE country LIKE 'Scotland';
 
 
 ```
