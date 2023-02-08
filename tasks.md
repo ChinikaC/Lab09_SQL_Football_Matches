@@ -54,7 +54,7 @@ SELECT COUNT(DISTINCT hometeam) FROM matches WHERE division_code='F1' or divisio
 7) Have Huddersfield played Swansea in any of the recorded matches?
 
 ```sql
-<!-- Copy solution here -->
+SELECT * from matches WHERE hometeam='Huddersfield' AND awayteam='Swansea' OR hometeam='Swansea' AND awayteam='Huddersfield';
 
 
 ```
@@ -62,7 +62,7 @@ SELECT COUNT(DISTINCT hometeam) FROM matches WHERE division_code='F1' or divisio
 8) How many draws were there in the `Eredivisie` between 2010 and 2015?
 
 ```sql
-<!-- Copy solution here -->
+SELECT COUNT(*) FROM matches WHERE division_code='N1' AND ftr='D' AND season BETWEEN 2010 AND 2015;
 
 
 ```
