@@ -30,7 +30,7 @@ SELECT name FROM divisions WHERE country LIKE 'Scotland';
 
 ```sql
 SELECT code FROM divisions WHERE name='Bundesliga';
-SELECT count(*) FROM matches WHERE division_code = 'D1' AND (hometeam = 'Freiburg' OR awayteam = 'Freiburg')
+SELECT count(*) FROM matches WHERE division_code = 'D1' AND (hometeam = 'Freiburg' OR awayteam = 'Freiburg');
 
 ```
 
